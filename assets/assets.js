@@ -16,7 +16,7 @@ import logo from './logo.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile_img.jpg';
+import profile_img from './profile_img.png';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.jpg';
@@ -37,9 +37,12 @@ import uiux from './uiux.png' ;
 import github from './github.png' ;
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-
+import spring from './spring.png';
+import framework from './framework.png';
 
 export const assets = {
+    framework ,
+    spring ,
     github ,
     uiux ,
     frontend ,
@@ -93,6 +96,11 @@ export const workData = [
         description: 'Developed an IoT-based solution for real-time crop identification to support agricultural insights and management. Utilized an Arduino Uno paired with a camera module to capture crop images, and deployed machine learning algorithms for accurate crop classification.',
         // bgImage: '/work-2.png',
     },
+    {
+        title: ' Saloon Appointment Booking System',
+        description: 'Developed secure RESTful APIs with Spring Boot for user and order management, protected by JWT authentication. I built a responsive frontend using React and integrated it with the backend services. I managed relational data in MySQL and containerized the services using Docker for easy deployment.',
+        // bgImage: '/work-2.png',
+    },
     // {
     //     title: 'Photography site',
     //     description: 'Web Design',
@@ -108,15 +116,17 @@ export const workData = [
 export const serviceData = [
     { icon: assets.frontend, title: 'Frontend Development', description: 'As a frontend developer, I build dynamic and interactive user interfaces using ReactJS, HTML, CSS, and JavaScript. My focus is on creating responsive, fast-loading websites that deliver seamless user experiences and integrate smoothly with backend services.', link: '' },
     { icon: assets.backend, title: 'Backend Development', description: 'As a backend developer, I work with Spring Boot and Java to create server-side logic, manage databases, and develop APIs. I optimize performance and scalability to ensure efficient handling of large data volumes and build reliable, secure backend solutions.', link: '' },
-    { icon: assets.uiux, title: 'UI/UX design', description: 'As a UI/UX designer, I create user-centered designs that enhance the overall experience. Using tools like Figma, Sketch, and Adobe XD, I focus on building intuitive and visually appealing interfaces that improve usability and navigation.', link: '' },
+    // { icon: assets.uiux, title: 'UI/UX design', description: 'As a UI/UX designer, I create user-centered designs that enhance the overall experience. Using tools like Figma, Sketch, and Adobe XD, I focus on building intuitive and visually appealing interfaces that improve usability and navigation.', link: '' },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Java , Python , HTML, CSS, JavaScript React Js, Next Js' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Java, Javascript, Python, HTML, CSS, SQL' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.framework, iconDark: assets.framework, title: 'Frameworks', description: 'React Js, Next Js, Spring Boot' },
+    // { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+
 ];
 
 export const toolsData = [
-    assets.vscode, assets.intellij, assets.firebase, assets.figma, assets.git
+    assets.vscode, assets.intellij, assets.firebase, assets.figma, assets.git , assets.spring
 ];

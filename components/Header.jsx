@@ -39,7 +39,7 @@ const Header = () => {
         <Image src={assets.hand_icon} alt='hand icon' className='w-6'/>
       </h3>
 
-      <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'>
+      <h1 className='text-3xl sm:text-6xl lg:text-[50px] font-Ovo'>
         <span ref={typedElement}></span>
       </h1>
       <p className='max-w-2xl mx-auto font-Ovo'>

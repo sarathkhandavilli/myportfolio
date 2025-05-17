@@ -5,7 +5,6 @@ import React from 'react'
 const About = () => {
   return (
    <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
-    <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
     <h2 className='text-center text-5xl font-Ovo' >About me</h2>
 
     <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-10 -mt-10'>
@@ -13,7 +12,7 @@ const About = () => {
             <Image src={assets.profile_img} alt='user' className='w-full rounded-3xl '/>
         </div>
         <div className=' flex-1 mb-10 max-w-2xl font-Ovo mt'>
-            <p className='lg:mt-20'>I am a passionate Computer Science Engineering student specializing in Java backend development.I have hands-on experience in developing RESTful APIs, working with relational databases like MySQL and Oracle .</p>
+            <p className='lg:mt-20 -mt-10'>I am a passionate Computer Science Engineering student specializing in Java backend development.I have hands-on experience in developing RESTful APIs, working with relational databases like MySQL and Oracle .</p>
 
             <ul className='grid grid-cols-1 sm:grid-cols-3 gap6 max-w-2xl mt-4'>
                 {infoList.map(({icon , iconDark , title , description} , index)=>(
@@ -24,14 +23,14 @@ const About = () => {
                     </li>
                 ))}
             </ul>
-            <h4 className='my-3 text-gray-700 font-Ovo'>Tools I use</h4>
+            {/* <h4 className='my-3 text-gray-700 font-Ovo'>Tools I use</h4>
             <ul className='flex items-center gap-3 sm:gap-5'>
                 {toolsData.map((tool , index)=>(
                     <li className='flex  items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500' key={index}>
                         <Image src={tool} alt='Tool' className='w-5 sm:w-7' />
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
     </div>
    </div>

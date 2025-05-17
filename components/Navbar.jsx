@@ -36,7 +36,7 @@ const Navbar = () => {
         <a href="#top">
             <Image src={assets.logo}  alt="logo" className="w-40 pt-3 cursor-pointer " />
         </a>
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} lg:-ml-40`}>
             <li><a className='font-Ovo hover:text-blue-500 transition-colors duration-300' href="#top">Home</a></li>
             <li><a className='font-Ovo hover:text-blue-500 transition-colors duration-300' href="#about">About</a></li>
             <li><a className='font-Ovo hover:text-blue-500 transition-colors duration-300' href="#services">Skills</a></li>
@@ -47,10 +47,10 @@ const Navbar = () => {
         <div  className='flex items-center gap-4'>
 
             <button>
-                <Image src={assets.moon_icon} alt='themeicon' className='w-6' />
+                {/* <Image src={assets.moon_icon} alt='themeicon' className='w-6' /> */}
             </button>
 
-             <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 font-Ovo'> Contact <Image src={assets.arrow_icon} alt="arrowicon" className='w-3' /> </a>
+             {/* <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 font-Ovo'> Contact <Image src={assets.arrow_icon} alt="arrowicon" className='w-3' /> </a> */}
 
              <button className='block md:hidden ml-3' onClick={openMenu}>
             <Image src={assets.menu_black} alt='menu' className='w-6'/>
