@@ -5,16 +5,13 @@ import React, { useEffect, useRef, useState } from 'react'
 const Navbar = () => {
 
     const [isScroll , setIsScroll] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const sideMenuRef = useRef() ;
 
-    const openMenu = () => {
-        sideMenuRef.current.style.transform = 'translateX(-16rem)'
-    }
-
-    const closeMenu = () => {
-        sideMenuRef.current.style.transform = 'translateX(16rem)'
-    }
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
 
     useEffect(()=>{
         window.addEventListener('scroll',()=>{
@@ -28,10 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
-        <Image src={assets.header_bg_color} alt='backgroundimage' className='w-full' />
-    </div>
-      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex  items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`} >
+      <nav className={`w-full fixed px-5 lg:px-8  xl:px-[8%] py-4 flex  items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`} >
         
         <a href="#top">
             <Image src={assets.logo}  alt="logo" className="w-40 pt-3 cursor-pointer " />
@@ -52,7 +46,7 @@ const Navbar = () => {
 
              {/* <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 font-Ovo'> Contact <Image src={assets.arrow_icon} alt="arrowicon" className='w-3' /> </a> */}
 
-             <button className='block md:hidden ml-3' onClick={openMenu}>
+             <button className='block md:hidden ml-3' onClick={toggleMobileMenu}>
             <Image src={assets.menu_black} alt='menu' className='w-6'/>
             </button>
 
@@ -60,15 +54,12 @@ const Navbar = () => {
 
         {/* -------------- mobile menu --------------- */}
 
-        <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-100 transition duration-500'>
-            <div className='absolute right-6 top-12' onClick={closeMenu}>
-                <Image src={assets.close_black} alt='closebutton' className='w-5 cursor-pointer'/>
-            </div>
-            <li><a className='font-Ovo' onClick={closeMenu} href="#top">Home</a></li>
-            <li><a className='font-Ovo 'onClick={closeMenu} href="#about">About</a></li>
-            <li><a className='font-Ovo' onClick={closeMenu} href="#services">Skills</a></li>
-            <li><a className='font-Ovo' onClick={closeMenu} href="#work">Projects</a></li>
-            <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact me</a></li>
+        <ul ref={sideMenuRef} className={`flex md:hidden flex-col gap-4 py-4 px-10 absolute top-full left-0 w-full transition-all duration-300 ease-in-out overflow-hidden items-center ${isMobileMenuOpen ? 'max-h-screen visible' : 'max-h-0 invisible'} ${isMobileMenuOpen ? (isScroll ? "bg-white bg-opacity-80 backdrop-blur-lg shadow-sm" : "bg-customBlue") : ""}`}>
+            <li><a className='font-Ovo' onClick={toggleMobileMenu} href="#top">Home</a></li>
+            <li><a className='font-Ovo 'onClick={toggleMobileMenu} href="#about">About</a></li>
+            <li><a className='font-Ovo' onClick={toggleMobileMenu} href="#services">Skills</a></li>
+            <li><a className='font-Ovo' onClick={toggleMobileMenu} href="#work">Projects</a></li>
+            <li><a className='font-Ovo' onClick={toggleMobileMenu} href="#contact">Contact me</a></li>
         </ul>
 
       </nav>

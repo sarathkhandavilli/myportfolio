@@ -29,7 +29,7 @@ const Contact = () => {
     };
 
   return (
-    <div id='contact' className='w-full px-[12%] py-10 mt-24 scroll-mt-20 bg-[url("/header-bg-color.jpg")] bg-no-repeat bg-center bg-[length:90%_auto]'>
+    <div id='contact' className='w-full px-[12%] py-10 mt-24 scroll-mt-20 bg-customBlue '>
         <h2 className='text-center text-5xl font-Ovo'>Get in touch</h2>
 
         <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>

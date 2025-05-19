@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightHover: '#e6f2ff',
+        customBlue: '#F4F4F9',
+        lightHover: ' #F4F4F9',
         darkHover: '#2a004a',
         darkTheme: '#11001F',
       },
