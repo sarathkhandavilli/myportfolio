@@ -85,7 +85,7 @@ export const workData = [
     {
         title: 'Netflix User Interface Clone',
         description: 'Developed a responsive front-end clone of the Netflix UI, focusing on enhancing user experience and functionality across multiple devices',
-        link : 'https://github.com/sarathkhandavilli/netflix'
+        link : 'https://github.com/sarathkhandavilli/netflixclone'
         // bgImage: '/work-1.png',
     },
     {
